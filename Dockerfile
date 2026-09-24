@@ -30,6 +30,7 @@ RUN apk --no-cache add \
 WORKDIR /libredesk
 
 COPY --from=builder /app/libredesk .
+COPY --from=builder /app/config.sample.toml ./config.toml
 
 EXPOSE 9000
 
