@@ -1,5 +1,5 @@
 # Build stage
-FROM golang:1.25-alpine AS builder
+FROM golang:1.27.3-alpine AS builder
 
 RUN apk add --no-cache \
     ca-certificates \
@@ -9,7 +9,7 @@ RUN apk add --no-cache \
     make \
     git
 
-RUN npm install -g pnpm@9.15.3
+RUN npm install -g pnpm@11.28.8
 
 WORKDIR /app
 
